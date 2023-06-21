@@ -40,6 +40,8 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
+      skip_testcases_on_fail: false,
+
       launch_url: 'http://localhost',
 
       screenshots: {
@@ -56,12 +58,14 @@ module.exports = {
         start_process: true,
         server_path: ''
       },
+      continueOnFailure: true
       
     },
     
     chrome: {
       desiredCapabilities: {
         browserName: 'chrome',
+        skip_testcases_on_fail: false,
         'goog:chromeOptions': {
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
           //
