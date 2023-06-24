@@ -3,17 +3,15 @@ version: 2.1
 jobs:
   ui-tests:
     docker:
-      - image: selenium/standalone-chrome:3.141.59
+      - image: circleci/node:14-browsers
     steps:
       - checkout
       - run:
           name: "Install NightwatchJS"
-          command: "sudo npm install -g nightwatch"
-
+          command: "npm install -g nightwatch"
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
-
       - store_artifacts:
           path: "test-output/night-watch-html-report"
 
