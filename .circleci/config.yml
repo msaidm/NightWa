@@ -16,7 +16,7 @@ jobs:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
 
-      - store_artifacts:
+      - store_test_results:
           path: /tests_output
 
 workflows:
