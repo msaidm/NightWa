@@ -1,18 +1,25 @@
 version: 2.1
-node: circleci/node@4.7
-
-browser-tools: circleci/browser-tools@1.1.0 
-
 jobs:
   ui-tests:
     docker:
       - image: cimg/node:lts-browsers
-      
-      
+
     steps:
       - checkout
-      - browser-tools/install-browser-tools
-      - node/install-packages
+      - run:
+          name: "Install Chrome and ChromeDriver"
+          command: |
+            apt-get update
+            apt-get install -yq google-chrome-stable
+            wget -N https://chromedriver.storage.googleapis.com/92.0.4515.107/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            mv chromedriver /usr/local/bin/chromedriver
+            chmod +x /usr/local/bin/chromedriver
+
+      - run:
+          name: "Install NightwatchJS"
+          command: "npm install -g nightwatch"
+
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
