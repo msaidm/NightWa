@@ -14,6 +14,7 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
+      - browser-tools/install-browser-tools
       - run:
           name: "Install NightwatchJS"
           command: "sudo npm install -g nightwatch"
