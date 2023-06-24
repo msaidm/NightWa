@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Install NightwatchJS and ChromeDriver
           command: |
-            npm install -g nightwatch chromedriver@latest
+            sudo npm install -g nightwatch chromedriver@latest
 
       - run:
           name: Start ChromeDriver
