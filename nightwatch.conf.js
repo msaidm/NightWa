@@ -61,6 +61,8 @@ module.exports = {
       continueOnFailure: true
       
     },
+    selenium: {
+      start_process: true },
     
     chrome: {
       desiredCapabilities: {
