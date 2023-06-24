@@ -16,7 +16,9 @@ jobs:
       - checkout
       - run:
           name: "Install NightwatchJS"
+          command: "sudo chown -R 65534:3434 "/root/.npm"
           command: "sudo npm install -g nightwatch"
+          
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
