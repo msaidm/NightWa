@@ -13,12 +13,11 @@ jobs:
 
       - run:
           name: "Start ChromeDriver"
-          background: true
-          command: "sudo npx chromedriver --port=9515"
+          command: "npx webdriver-manager update && npx webdriver-manager start"
 
       - run:
           name: "Run ContactUs tests"
-          command: "sudo npx nightwatch test/contactUs.js"
+          command: "npx nightwatch test/contactUs.js"
 
       - store_artifacts:
           path: "test-output/night-watch-html-report"
