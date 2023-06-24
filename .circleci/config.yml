@@ -1,35 +1,30 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   ui-tests:
-    # Specify the execution environment using the Selenium WebDriver image.
     docker:
-      - image: selenium/standalone-chrome
-    # Add steps to the job.
+      - image: circleci/node:14-browsers
+
     steps:
       - checkout
       - run:
-          name: "Install Node.js and NightwatchJS"
+          name: "Install NightwatchJS and ChromeDriver"
           command: |
-            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-            sudo apt-get install -y nodejs
             sudo npm install -g nightwatch
             sudo npm install -g chromedriver@latest
+
       - run:
           name: "Start ChromeDriver"
+          background: true
           command: "chromedriver --port=9515 &"
+
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
-      - store_artifacts:
-          path: "test-output/night-watch-html-report"
 
-# Orchestrate jobs using workflows.
-# See: https://circleci.com/docs/configuration-reference/#workflows
+      - store_artifacts:
+          path: "test-output/nightwatch-html-report"
+
 workflows:
   version: 2
   ui-tests-workflow:
