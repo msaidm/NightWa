@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Install Webdriver Manager and NightwatchJS"
-          command:sudo npm cache clean --force && sudo npm install -g nightwatch
+          command: sudo npm cache clean --force && sudo npm install -g nightwatch
 
       - run:
           name: "Update Webdriver Manager"
