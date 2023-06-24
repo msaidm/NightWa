@@ -14,13 +14,12 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "Clear NightwatchJS"
+      -run:
+          name: "Install NightwatchJS"
           command: "sudo chown -R 65534:3434 "/root/.npm"
       - run:
           name: "Install NightwatchJS"
           command: "sudo npm install -g nightwatch"
-   
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
