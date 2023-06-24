@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   ui-tests:
     docker:
-      - image: circleci/node@4.7
+      - image: cimg/node:lts-browsers
     steps:
       - checkout
       - run:
