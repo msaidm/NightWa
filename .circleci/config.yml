@@ -9,7 +9,7 @@ jobs:
       - run:
           name: "Start ChromeDriver"
           background: true
-          command: "npx webdriver-manager start"
+          command: "npx webdriver-manager update && npx webdriver-manager start"
       - run:
           name: "Install NightwatchJS"
           command: "sudo npm install -g nightwatch"
