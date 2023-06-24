@@ -5,9 +5,9 @@
 
   <testsuite name="test.contactUs"
     errors="0" failures="10" hostname="" id="" package="contactUs" skipped="0"
-    tests="13" time="155.7" timestamp="">
+    tests="13" time="171.4" timestamp="">
   
-    <testcase name="Contact Us Page and Form Test" classname="test.contactUs" time="0.2330" assertions="4">
+    <testcase name="Contact Us Page and Form Test" classname="test.contactUs" time="0.2240" assertions="4">
 
     
 
@@ -18,86 +18,86 @@
     
     </testcase>
   
-    <testcase name="Without all required fields" classname="test.contactUs" time="6.759" assertions="2">
+    <testcase name="Without all required fields" classname="test.contactUs" time="6.931" assertions="2">
 
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Subject Heading, Email and Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Subject Heading, Email and Message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Subject Heading, Email and Message cannot be blank.&#39;&#34; (5482ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:20:24)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Entering Subject Heading only" classname="test.contactUs" time="6.628" assertions="2">
-
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Email and Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Email and Message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Email and Message cannot be blank.&#39;&#34; (5416ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:34:24)</failure>
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Subject Heading, Email and Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Subject Heading, Email and Message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Subject Heading, Email and Message cannot be blank.&#39;&#34; (5465ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:20:24)</failure>
 
     
     </testcase>
   
-    <testcase name="Entering Valid Email only" classname="test.contactUs" time="6.872" assertions="2">
+    <testcase name="Entering Subject Heading only" classname="test.contactUs" time="9.195" assertions="2">
 
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Subject Heading and Message cannot be blank&#39; in 5000ms - expected &#34;contains text &#39;Subject Heading and Message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;Subject Heading and Message cannot be blank&#39;&#34; (5293ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:48:24)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Entering Invalid Email only" classname="test.contactUs" time="1.135" assertions="2">
-
-    
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Email and Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Email and Message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Email and Message cannot be blank.&#39;&#34; (5429ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:34:24)</failure>
 
     
     </testcase>
   
-    <testcase name="Entering Message only" classname="test.contactUs" time="6.290" assertions="2">
+    <testcase name="Entering Valid Email only" classname="test.contactUs" time="8.700" assertions="2">
 
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Email and Subject Heading cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Email and Subject Heading cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Email and Subject Heading cannot be blank.&#39;&#34; (5306ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:76:24)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Without entering a message" classname="test.contactUs" time="6.390" assertions="2">
-
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Message cannot be blank.&#39;&#34; (5322ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:90:24)</failure>
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Subject Heading and Message cannot be blank&#39; in 5000ms - expected &#34;contains text &#39;Subject Heading and Message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;Subject Heading and Message cannot be blank&#39;&#34; (5314ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:48:24)</failure>
 
     
     </testcase>
   
-    <testcase name="Entering Subject Heading, wrong email and blank address" classname="test.contactUs" time="6.324" assertions="2">
-
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Please enter a valid email address and message.&#39; in 5000ms - expected &#34;contains text &#39;Please enter a valid email address and message.&#39;&#34; but got: &#34;does not contain &#39;Please enter a valid email address and message.&#39;&#34; (5274ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:104:24)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Entering Subject Heading, wrong email and message" classname="test.contactUs" time="1.003" assertions="2">
+    <testcase name="Entering Invalid Email only" classname="test.contactUs" time="1.944" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Entering Subject Heading, empty email and a message" classname="test.contactUs" time="6.268" assertions="2">
+    <testcase name="Entering Message only" classname="test.contactUs" time="6.990" assertions="2">
 
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Email address cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Email address cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Email address cannot be blank.&#39;&#34; (5314ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:132:24)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Entering no Heading, valid email and a message" classname="test.contactUs" time="6.334" assertions="2">
-
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Subject Heading cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Subject Heading cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Subject Heading cannot be blank.&#39;&#34; (5303ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:146:24)</failure>
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Email and Subject Heading cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Email and Subject Heading cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Email and Subject Heading cannot be blank.&#39;&#34; (5318ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:76:24)</failure>
 
     
     </testcase>
   
-    <testcase name="Entering all required fields" classname="test.contactUs" time="1.032" assertions="2">
+    <testcase name="Without entering a message" classname="test.contactUs" time="7.295" assertions="2">
+
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Message cannot be blank.&#39;&#34; (5359ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:90:24)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Entering Subject Heading, wrong email and blank address" classname="test.contactUs" time="7.066" assertions="2">
+
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Please enter a valid email address and message.&#39; in 5000ms - expected &#34;contains text &#39;Please enter a valid email address and message.&#39;&#34; but got: &#34;does not contain &#39;Please enter a valid email address and message.&#39;&#34; (5327ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:104:24)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Entering Subject Heading, wrong email and message" classname="test.contactUs" time="1.591" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Entering Spaces in the message field" classname="test.contactUs" time="20.14" assertions="2">  <failure message="Testing if element &lt;.alert.alert-danger&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5166ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:175:24)</failure>
+    <testcase name="Entering Subject Heading, empty email and a message" classname="test.contactUs" time="6.352" assertions="2">
 
-      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Message cannot be blank.&#39;&#34; but got: &#34;element could not be located&#34; (5159ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:176:24)</failure>
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Email address cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Email address cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Email address cannot be blank.&#39;&#34; (5318ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:132:24)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Entering no Heading, valid email and a message" classname="test.contactUs" time="7.135" assertions="2">
+
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Subject Heading cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Subject Heading cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;Subject Heading cannot be blank.&#39;&#34; (5315ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:146:24)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Entering all required fields" classname="test.contactUs" time="1.349" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering Spaces in the message field" classname="test.contactUs" time="17.31" assertions="2">  <failure message="Testing if element &lt;.alert.alert-danger&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5151ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:175:24)</failure>
+
+      <failure message="Testing if element &lt;.alert.alert-danger&gt; contains text &#39;Message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;Message cannot be blank.&#39;&#34; but got: &#34;element could not be located&#34; (5197ms)">    at DescribeInstance.&lt;anonymous&gt; (/Users/mohammedsaid/Desktop/NightWatch/Temp/test/contactUs.js:176:24)</failure>
 
     
     </testcase>
