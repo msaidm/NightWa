@@ -13,7 +13,12 @@ jobs:
 
       - run:
           name: "Start ChromeDriver"
-          command: "npx webdriver-manager update"
+          background: true
+          command: "npx webdriver-manager update && npx webdriver-manager start"
+
+      - run:
+          name: "Wait for ChromeDriver to start"
+          command: "sleep 5"
 
       - run:
           name: "Run ContactUs tests"
