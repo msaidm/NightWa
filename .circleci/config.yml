@@ -3,12 +3,12 @@ version: 2.1
 jobs:
   ui-tests:
     docker:
-      - image: circleci/node:14-browsers
+      - image: circleci/node@4.7
     steps:
       - checkout
       - run:
           name: "Install NightwatchJS"
-          command: "sudo chown -R 65534:3434 /root/.npm && sudo npm install -g nightwatch"
+          command: "sudo npm install -g nightwatch"
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
