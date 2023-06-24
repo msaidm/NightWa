@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: "Start ChromeDriver"
-          command: "npx webdriver-manager update && npx webdriver-manager start"
+          command: "npx webdriver-manager update"
 
       - run:
           name: "Run ContactUs tests"
