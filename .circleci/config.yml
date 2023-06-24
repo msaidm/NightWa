@@ -6,25 +6,27 @@ version: 2.1
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   ui-tests:
-    # Specify the execution environment using the Selenium WebDriver image.
+    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
+    # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: selenium/standalone-chrome
-    # Add steps to the job.
+      - image: cimg/node:lts
+        environment:
+          CHROME_BIN: /usr/bin/google-chrome
+          CHROME_PATH: /usr/bin/google-chrome
+    # Add steps to the job
+    # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
       - run:
-          name: "Install Node.js and NightwatchJS"
-          command: |
-            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-            sudo apt-get install -y nodejs
-            sudo npm install -g nightwatch
+          name: "Install NightwatchJS"
+          command: "sudo npm install -g nightwatch"
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
       - store_artifacts:
           path: "test-output/night-watch-html-report"
 
-# Orchestrate jobs using workflows.
+# Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   version: 2
