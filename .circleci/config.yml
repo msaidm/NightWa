@@ -8,29 +8,14 @@ jobs:
     docker:
       - image: cimg/node:lts-browsers
       
+      
     steps:
       - checkout
-      - run:
-          name: "Install Webdriver Manager and NightwatchJS"
-          command: sudo npm cache clean --force && sudo npm install -g nightwatch
-
-      - run:
-          name: "Update Webdriver Manager"
-          command: "webdriver-manager update"
-
-      - run:
-          name: "Start ChromeDriver"
-          command: "webdriver-manager start &"
-
+      - browser-tools/install-browser-tools
+      - node/install-packages
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
-          background: true
-
-      - save_cache:
-          key: ui-tests-cache-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ./node_modules
 
       - store_artifacts:
           path: "test-output/night-watch-html-report"
