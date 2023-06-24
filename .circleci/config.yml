@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   ui-tests:
     docker:
-      - image: circleci/node:14-browsers
+      - image: selenium/standalone-chrome
 
     steps:
       - checkout
@@ -22,7 +22,7 @@ jobs:
           command: npx nightwatch test/contactUs.js
 
       - store_artifacts:
-          path: test-output/nightwatch-html-report
+          path: test-output/nightwatch-html-report.html
 
 workflows:
   version: 2
