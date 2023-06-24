@@ -1,7 +1,8 @@
 version: 2.1
-node: circleci/node@4.7
+orbs:
+  browser-tools: circleci/browser-tools@1.4.1
+  node: circleci/node@4.7
 
-browser-tools: circleci/browser-tools@1.1.0 
 
 jobs:
   ui-tests:
