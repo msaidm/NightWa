@@ -8,22 +8,21 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Install NightwatchJS and ChromeDriver"
+          name: Install NightwatchJS and ChromeDriver
           command: |
-            sudo npm install -g nightwatch
-            sudo npm install -g chromedriver@latest
+            npm install -g nightwatch chromedriver@latest
 
       - run:
-          name: "Start ChromeDriver"
+          name: Start ChromeDriver
           background: true
-          command: "chromedriver --port=9515 &"
+          command: chromedriver --port=9515
 
       - run:
-          name: "Run ContactUs tests"
-          command: "npx nightwatch test/contactUs.js"
+          name: Run ContactUs tests
+          command: npx nightwatch test/contactUs.js
 
       - store_artifacts:
-          path: "test-output/nightwatch-html-report"
+          path: test-output/nightwatch-html-report
 
 workflows:
   version: 2
