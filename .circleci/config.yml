@@ -3,19 +3,33 @@ version: 2.1
 jobs:
   ui-tests:
     docker:
-      - image: cimg/node:lts-browsers
+      - image: circleci/node:14-browsers
     steps:
       - checkout
       - run:
-          name: "Start ChromeDriver"
-          background: true
-          command: "npx webdriver-manager update && npx webdriver-manager start"
+          name: "Install Webdriver Manager and NightwatchJS"
+          command: |
+            npm install -g webdriver-manager
+            npm install -g nightwatch
+
       - run:
-          name: "Install NightwatchJS"
-          command: "sudo npm install -g nightwatch"
+          name: "Update Webdriver Manager"
+          command: "webdriver-manager update"
+
+      - run:
+          name: "Start ChromeDriver"
+          command: "webdriver-manager start &"
+
       - run:
           name: "Run ContactUs tests"
           command: "npx nightwatch test/contactUs.js"
+          background: true
+
+      - save_cache:
+          key: ui-tests-cache-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ./node_modules
+
       - store_artifacts:
           path: "test-output/night-watch-html-report"
 
