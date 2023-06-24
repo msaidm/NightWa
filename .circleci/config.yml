@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   ui-tests:
     docker:
-      - image: selenium/standalone-chrome
+      - image: selenium/standalone-chrome:3.141.59
     steps:
       - checkout
       - run:
