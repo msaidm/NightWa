@@ -17,7 +17,7 @@ jobs:
           command: "npx nightwatch test/contactUs.js"
 
       - store_artifacts:
-          path: "test-output/night-watch-html-report.html"
+          path: /tests_output
 
 workflows:
   version: 2
